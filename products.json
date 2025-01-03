@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Classic White Sneaker",
+    "price": "$50",
+    "image": "sneaker1.jpg",
+    "category": "Casual",
+    "description": "A clean and versatile sneaker for everyday wear."
+  },
+  {
+    "name": "Black Streetwear Sneaker",
+    "price": "$60",
+    "image": "sneaker2.jpg",
+    "category": "Streetwear",
+    "description": "Bold and stylish, perfect for the streets."
+  }
+]
