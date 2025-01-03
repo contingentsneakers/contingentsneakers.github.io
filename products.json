@@ -2,15 +2,29 @@
   {
     "name": "Air Max 270",
     "image": "images/airmax270.jpg",
-    "category": "Running",
-    "description": "A stylish and comfortable running sneaker.",
+    "category": "men",
+    "description": "Stylish and comfortable for running.",
     "price": "$150"
   },
   {
     "name": "Yeezy Boost 350",
     "image": "images/yeezyboost350.jpg",
-    "category": "Casual",
-    "description": "Sleek design for everyday wear.",
+    "category": "women",
+    "description": "Perfect for everyday wear.",
     "price": "$200"
+  },
+  {
+    "name": "Classic Vans",
+    "image": "images/vansclassic.jpg",
+    "category": "unisex",
+    "description": "A timeless design for everyone.",
+    "price": "$80"
+  },
+  {
+    "name": "Mini Jordans",
+    "image": "images/minijordans.jpg",
+    "category": "kids",
+    "description": "For the future sneakerheads.",
+    "price": "$50"
   }
 ]
