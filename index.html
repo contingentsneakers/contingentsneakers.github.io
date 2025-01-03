@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contingent Sneakers</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    header { background-color: #333; color: white; padding: 10px; text-align: center; }
+    .container { padding: 20px; }
+    .product { border: 1px solid #ddd; padding: 10px; margin: 10px; display: inline-block; width: 200px; text-align: center; }
+    .product img { width: 100%; height: auto; }
+    footer { background-color: #333; color: white; text-align: center; padding: 10px; position: fixed; width: 100%; bottom: 0; }
+    .category { margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Contingent Sneakers</h1>
+    <p>Trendy sneakers at unbeatable prices!</p>
+  </header>
+  <div class="container">
+    <h2>Our Collection</h2>
+    <div id="product-list"></div>
+  </div>
+  <footer>
+    <p>Follow us on Instagram: <a href="https://instagram.com/yourpage" target="_blank" style="color: lightblue;">@contingentsneakers</a></p>
+  </footer>
+  <script>
+    // Fetch and display products
+    fetch('products.json')
+      .then(response => response.json())
+      .then(data => {
+        const productList = document.getElementById('product-list');
+        data.forEach(product => {
+          productList.innerHTML += `
+            <div class="product">
+              <img src="${product.image}" alt="${product.name}">
+              <h3>${product.name}</h3>
+              <p>${product.category}</p>
+              <p>${product.description}</p>
+              <p><strong>${product.price}</strong></p>
+            </div>`;
+        });
+      });
+  </script>
+</body>
+</html>
