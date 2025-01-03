@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,31 +10,64 @@
 <body>
   <header>
     <h1>Contingent Sneakers</h1>
+    <p>Your ultimate destination for premium sneakers at unbeatable prices!</p>
     <nav>
-      <a href="#products">Products</a>
-      <a href="#new-arrivals">New Arrivals</a>
+      <a href="#men">Men</a>
+      <a href="#women">Women</a>
+      <a href="#unisex">Unisex</a>
+      <a href="#kids">Kids</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
-  
+
   <main>
-    <section id="products">
-      <h2>Our Collection</h2>
-      <div class="product-grid">
-        <!-- Dynamic Product Cards -->
-      </div>
+    <section class="hero">
+      <h2>Step into Style</h2>
+      <p>Explore our latest arrivals and timeless classics.</p>
+      <button onclick="scrollToSection('new-arrivals')">Shop Now</button>
     </section>
-    
+
     <section id="new-arrivals">
       <h2>New Arrivals</h2>
-      <div class="product-grid">
+      <div class="product-grid" id="new-arrivals-grid">
         <!-- Dynamic New Arrivals -->
       </div>
     </section>
+
+    <section id="men">
+      <h2>Men's Collection</h2>
+      <div class="product-grid" id="men-grid">
+        <!-- Men's Products -->
+      </div>
+    </section>
+
+    <section id="women">
+      <h2>Women's Collection</h2>
+      <div class="product-grid" id="women-grid">
+        <!-- Women's Products -->
+      </div>
+    </section>
+
+    <section id="unisex">
+      <h2>Unisex Sneakers</h2>
+      <div class="product-grid" id="unisex-grid">
+        <!-- Unisex Products -->
+      </div>
+    </section>
+
+    <section id="kids">
+      <h2>Kids' Sneakers</h2>
+      <div class="product-grid" id="kids-grid">
+        <!-- Kids' Products -->
+      </div>
+    </section>
   </main>
-  
+
   <footer>
-    <p>&copy; 2025 Contingent Sneakers | Built with love</p>
+    <p>&copy; 2025 Contingent Sneakers | Follow us on 
+      <a href="https://instagram.com/contingentsneakers">Instagram</a> 
+      and <a href="https://facebook.com/contingentsneakers">Facebook</a>.
+    </p>
   </footer>
 
   <script src="app.js"></script>
