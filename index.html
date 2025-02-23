@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Do You Love Me? ❤️</title>
     <style>
-        /* Importing Google Font */
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-        /* Global Styles */
         * {
             margin: 0;
             padding: 0;
@@ -87,12 +85,10 @@
             transform: scale(1.1);
         }
 
-        /* Animations */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(-20px); }
             to { opacity: 1; transform: translateY(0); }
         }
-
     </style>
 </head>
 <body>
@@ -100,14 +96,14 @@
         <h2 class="question">Do you love me? 💖</h2>
         <img class="gif" alt="Cute gif" src="https://i.giphy.com/media/Vuw9m5wXviFIQ/giphy.gif" />
         <div class="btn-group">
-            <button id="yes-btn" onclick="loveMessage()">Yes</button>
+            <button id="yes-btn" onclick="goToYesPage()">Yes</button>
             <button id="no-btn" onmouseover="moveButton()">No</button>
         </div>
     </div>
 
     <script>
-        function loveMessage() {
-            alert("Yay! I love you too! ❤️🥰");
+        function goToYesPage() {
+            window.location.href = "yes.html";
         }
 
         function moveButton() {
