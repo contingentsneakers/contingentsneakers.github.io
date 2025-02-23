@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aarish ❤️ His Love</title>
+    <style>
+        /* General Page Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Header */
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        /* Love Section */
+        .love-wrapper {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 400px;
+        }
+
+        .question {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .gif {
+            width: 200px;
+            height: auto;
+            margin: 15px 0;
+            border-radius: 10px;
+        }
+
+        /* Buttons */
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            position: relative;
+        }
+
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        #yes-btn {
+            background-color: #ff69b4;
+            color: white;
+        }
+
+        #yes-btn:hover {
+            background-color: #ff1493;
+        }
+
+        #no-btn {
+            background-color: #ddd;
+            color: black;
+            position: absolute;
+        }
+
+        /* Floating Hearts */
+        @keyframes float {
+            0% { transform: translateY(0); opacity: 1; }
+            100% { transform: translateY(-100px); opacity: 0; }
+        }
+
+        .heart {
+            position: absolute;
+            font-size: 24px;
+            animation: float 2s linear infinite;
+            color: #ff4d6d;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <h1>Aarish ❤️ His Love</h1>
+    <p>A special page just for you!</p>
+
+    <!-- Love Interaction -->
+    <div class="love-wrapper">
+        <h2 class="question">Do you love me? 💖</h2>
+        <img class="gif" alt="Cute gif" src="https://i.giphy.com/media/Vuw9m5wXviFIQ/giphy.gif" />
+        <div class="btn-group">
+            <button id="yes-btn">Yes</button>
+            <button id="no-btn">No</button>
+        </div>
+    </div>
+
+    <script>
+        // Yes Button Click Event
+        document.getElementById('yes-btn').addEventListener('click', function() {
+            alert('Yay! I love you too! ❤️🥰');
+        });
+
+        // No Button Hover Event (Move Away)
+        document.getElementById('no-btn').addEventListener('mouseover', function() {
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 50);
+            this.style.left = x + 'px';
+            this.style.top = y + 'px';
+        });
+
+        // Floating Hearts Effect
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.top = '100vh';
+            heart.style.animationDuration = Math.random() * 2 + 3 + 's';
+
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 3000);
+        }
+
+        setInterval(createHeart, 500);
+    </script>
+
+</body>
+</html>
