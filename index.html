@@ -3,189 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aarish ❤️ His Love</title>
+    <title>Do You Love Me? ❤️</title>
     <style>
-        /* Google Fonts */
-        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@300;400;600&display=swap');
+        /* Importing Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-        /* Body Styling */
-        body {
-            font-family: 'Poppins', sans-serif;
-            text-align: center;
-            background: linear-gradient(to right, #ff758c, #ff7eb3, #ffa69e);
-            color: white;
+        /* Global Styles */
+        * {
             margin: 0;
             padding: 0;
-            height: 100vh;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
             display: flex;
-            flex-direction: column;
-            align-items: center;
             justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
             overflow: hidden;
         }
 
-        /* Main Title */
-        h1 {
-            font-family: 'Dancing Script', cursive;
-            font-size: 50px;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-        }
-
-        p {
-            font-size: 20px;
-            font-weight: 300;
-            margin-bottom: 30px;
-        }
-
-        /* Love Section */
-        .love-wrapper {
+        .wrapper {
             background: rgba(255, 255, 255, 0.2);
-            padding: 25px;
+            backdrop-filter: blur(10px);
+            padding: 30px;
             border-radius: 15px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-            width: 90%;
-            max-width: 400px;
-            backdrop-filter: blur(15px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 350px;
             animation: fadeIn 1.5s ease-in-out;
-            position: relative;
         }
 
         .question {
-            font-size: 26px;
-            font-weight: bold;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+            font-size: 22px;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 15px;
         }
 
         .gif {
-            width: 220px;
-            height: auto;
-            margin: 15px 0;
+            width: 100%;
             border-radius: 10px;
-            box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+            margin-bottom: 15px;
         }
 
-        /* Buttons */
         .btn-group {
             display: flex;
             justify-content: center;
-            gap: 20px;
-            position: relative;
+            gap: 15px;
         }
 
         button {
-            font-size: 18px;
-            padding: 12px 25px;
             border: none;
+            padding: 12px 20px;
+            font-size: 16px;
             cursor: pointer;
-            border-radius: 8px;
-            transition: all 0.3s ease-in-out;
-            font-weight: bold;
-            outline: none;
+            font-weight: 600;
+            border-radius: 30px;
+            transition: 0.3s;
         }
 
         #yes-btn {
-            background: linear-gradient(to right, #ff4d6d, #ff1e56);
+            background: #ff4d6d;
             color: white;
-            box-shadow: 0 0 15px rgba(255, 77, 109, 0.6);
+            box-shadow: 0 4px 10px rgba(255, 77, 109, 0.3);
         }
 
         #yes-btn:hover {
-            background: linear-gradient(to right, #ff1e56, #ff4d6d);
+            background: #ff1e4d;
             transform: scale(1.1);
         }
 
         #no-btn {
-            background-color: #ffffff;
+            background: white;
             color: #ff4d6d;
-            border: 2px solid #ff4d6d;
-            position: absolute;
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
         }
 
-        /* No Button Moves Away */
         #no-btn:hover {
-            position: absolute;
+            background: #ffe6ea;
+            transform: scale(1.1);
         }
 
-        /* Floating Heart Animation */
-        @keyframes float {
-            0% { transform: translateY(0); opacity: 1; }
-            100% { transform: translateY(-150px); opacity: 0; }
-        }
-
-        .heart {
-            position: absolute;
-            font-size: 28px;
-            animation: float 3s linear infinite;
-            color: #ff1c4d;
-        }
-
-        /* Fade-in Animation */
+        /* Animations */
         @keyframes fadeIn {
-            0% { opacity: 0; transform: scale(0.8); }
-            100% { opacity: 1; transform: scale(1); }
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Love Message Pop-up */
-        .hidden-message {
-            display: none;
-            font-size: 22px;
-            font-weight: bold;
-            color: #fff;
-            margin-top: 20px;
-            animation: fadeIn 1s ease-in-out;
-        }
     </style>
 </head>
 <body>
-
-    <!-- Header -->
-    <h1>Aarish ❤️ His Love</h1>
-    <p>My love for you is endless! 💖</p>
-
-    <!-- Love Interaction -->
-    <div class="love-wrapper">
+    <div class="wrapper">
         <h2 class="question">Do you love me? 💖</h2>
         <img class="gif" alt="Cute gif" src="https://i.giphy.com/media/Vuw9m5wXviFIQ/giphy.gif" />
         <div class="btn-group">
-            <button id="yes-btn">Yes</button>
-            <button id="no-btn">No</button>
+            <button id="yes-btn" onclick="loveMessage()">Yes</button>
+            <button id="no-btn" onmouseover="moveButton()">No</button>
         </div>
-        <p class="hidden-message" id="love-message">Awww! I knew it! You are my forever love! 😘❤️</p>
     </div>
 
     <script>
-        // Yes Button Click Event
-        document.getElementById('yes-btn').addEventListener('click', function() {
-            document.getElementById('love-message').style.display = "block";
-        });
-
-        // No Button Moves Away When Hovered
-        document.getElementById('no-btn').addEventListener('mouseover', function() {
-            let x = Math.random() * (window.innerWidth - 150);
-            let y = Math.random() * (window.innerHeight - 80);
-            this.style.left = x + 'px';
-            this.style.top = y + 'px';
-        });
-
-        // Floating Hearts Effect
-        function createHeart() {
-            const heart = document.createElement('div');
-            heart.classList.add('heart');
-            heart.innerHTML = '❤️';
-            heart.style.left = Math.random() * 100 + 'vw';
-            heart.style.top = '100vh';
-            heart.style.animationDuration = Math.random() * 3 + 2 + 's';
-
-            document.body.appendChild(heart);
-
-            setTimeout(() => {
-                heart.remove();
-            }, 3000);
+        function loveMessage() {
+            alert("Yay! I love you too! ❤️🥰");
         }
 
-        setInterval(createHeart, 500);
+        function moveButton() {
+            const noBtn = document.getElementById('no-btn');
+            const x = Math.random() * (window.innerWidth - 100);
+            const y = Math.random() * (window.innerHeight - 100);
+            noBtn.style.position = "absolute";
+            noBtn.style.left = `${x}px`;
+            noBtn.style.top = `${y}px`;
+        }
     </script>
-
 </body>
 </html>
