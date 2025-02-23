@@ -15,76 +15,68 @@
         }
 
         body {
-            background: linear-gradient(to right, #ff758c, #ff7eb3);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-            overflow: hidden;
-        }
+        body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #ff758c, #ff7eb3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
 
-        .wrapper {
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            width: 350px;
-            animation: fadeIn 1.5s ease-in-out;
-        }
+.wrapper {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1.5s ease-in-out;
+}
 
-        .question {
-            font-size: 22px;
-            font-weight: 600;
-            color: white;
-            margin-bottom: 15px;
-        }
+h2 {
+    font-size: 28px;
+    color: #fff;
+    margin-bottom: 15px;
+}
 
-        .gif {
-            width: 100%;
-            border-radius: 10px;
-            margin-bottom: 15px;
-        }
+.gif {
+    width: 200px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
 
-        .btn-group {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
+.love-message {
+    font-size: 18px;
+    color: #fff;
+    margin: 15px 0;
+    line-height: 1.6;
+    padding: 0 15px;
+}
 
-        button {
-            border: none;
-            padding: 12px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            font-weight: 600;
-            border-radius: 30px;
-            transition: 0.3s;
-        }
+.back-btn {
+    text-decoration: none;
+    color: white;
+    background: #ff477e;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    display: inline-block;
+    transition: 0.3s;
+}
 
-        #yes-btn {
-            background: #ff4d6d;
-            color: white;
-            box-shadow: 0 4px 10px rgba(255, 77, 109, 0.3);
-        }
+.back-btn:hover {
+    background: #ff1a66;
+    transform: scale(1.1);
+}
 
-        #yes-btn:hover {
-            background: #ff1e4d;
-            transform: scale(1.1);
-        }
-
-        #no-btn {
-            background: white;
-            color: #ff4d6d;
-            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
-        }
-
-        #no-btn:hover {
-            background: #ffe6ea;
-            transform: scale(1.1);
-        }
-
+/* Fade-in animation */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+            
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(-20px); }
             to { opacity: 1; transform: translateY(0); }
