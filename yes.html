@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You Said YES! ❤️</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .wrapper {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .gif {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .love-message {
+            color: white;
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            color: white;
+            background: #ff4d6d;
+            border-radius: 25px;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #ff1e4d;
+            transform: scale(1.1);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h2>YAY! 😍 You said YES!</h2>
+        <img class="gif" src="https://i.giphy.com/media/jUwpNzg9IcyrK/giphy.gif" alt="Happy GIF">
+        <p class="love-message">
+            Iqra, you are the most amazing, beautiful, and kind-hearted person ever! 💖  
+            I love you so much, and I promise to always be there for you! 😘
+        </p>
+        <a href="index.html" class="back-btn">Go Back</a>
+    </div>
+</body>
+</html>
