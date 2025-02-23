@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Do You Love Me? ❤️</title>
+    <title>You Said YES! ❤️</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
@@ -34,8 +34,8 @@
             animation: fadeIn 1.5s ease-in-out;
         }
 
-        .question {
-            font-size: 22px;
+        h2 {
+            font-size: 24px;
             font-weight: 600;
             color: white;
             margin-bottom: 15px;
@@ -47,41 +47,27 @@
             margin-bottom: 15px;
         }
 
-        .btn-group {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
+        .love-message {
+            color: white;
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 20px;
         }
 
-        button {
-            border: none;
-            padding: 12px 20px;
+        .back-btn {
+            display: inline-block;
+            padding: 10px 20px;
             font-size: 16px;
-            cursor: pointer;
             font-weight: 600;
-            border-radius: 30px;
+            text-decoration: none;
+            color: white;
+            background: #ff4d6d;
+            border-radius: 25px;
             transition: 0.3s;
         }
 
-        #yes-btn {
-            background: #ff4d6d;
-            color: white;
-            box-shadow: 0 4px 10px rgba(255, 77, 109, 0.3);
-        }
-
-        #yes-btn:hover {
+        .back-btn:hover {
             background: #ff1e4d;
-            transform: scale(1.1);
-        }
-
-        #no-btn {
-            background: white;
-            color: #ff4d6d;
-            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
-        }
-
-        #no-btn:hover {
-            background: #ffe6ea;
             transform: scale(1.1);
         }
 
@@ -93,27 +79,13 @@
 </head>
 <body>
     <div class="wrapper">
-        <h2 class="question">Do you love me? 💖</h2>
-        <img class="gif" alt="Cute gif" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbjJvdWZzYXc1NGJ6aGp1cDE3b2dyNnVzOGN1andkMjVrMmRzeGwwZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3OhXBaoR1tVPW/giphy.gif" />
-        <div class="btn-group">
-            <button id="yes-btn" onclick="goToYesPage()">Yes</button>
-            <button id="no-btn" onmouseover="moveButton()">No</button>
-        </div>
+        <h2>YAY! 😍 You said YES!</h2>
+        <img class="gif" src="https://i.giphy.com/media/jUwpNzg9IcyrK/giphy.gif" alt="Happy GIF">
+        <p class="love-message">
+            Iqra, you are the most amazing, beautiful, and kind-hearted person ever! 💖  
+            I love you so much, and I promise to always be there for you! 😘
+        </p>
+        <a href="index.html" class="back-btn">Go Back</a>
     </div>
-
-    <script>
-        function goToYesPage() {
-            window.location.href = "yes.html";
-        }
-
-        function moveButton() {
-            const noBtn = document.getElementById('no-btn');
-            const x = Math.random() * (window.innerWidth - 100);
-            const y = Math.random() * (window.innerHeight - 100);
-            noBtn.style.position = "absolute";
-            noBtn.style.left = `${x}px`;
-            noBtn.style.top = `${y}px`;
-        }
-    </script>
 </body>
 </html>
