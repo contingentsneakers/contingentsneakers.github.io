@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aarish ❤️ His Love</title>
     <style>
-        /* Google Font */
-        @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap');
+        /* Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@300;400;600&display=swap');
 
-        /* General Styles */
+        /* Body Styling */
         body {
             font-family: 'Poppins', sans-serif;
             text-align: center;
-            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            background: linear-gradient(to right, #ff758c, #ff7eb3, #ffa69e);
             color: white;
             margin: 0;
             padding: 0;
@@ -24,40 +24,41 @@
             overflow: hidden;
         }
 
-        /* Header */
+        /* Main Title */
         h1 {
-            font-family: 'Pacifico', cursive;
-            font-size: 42px;
+            font-family: 'Dancing Script', cursive;
+            font-size: 50px;
             margin-bottom: 10px;
             text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
         }
 
         p {
-            font-size: 18px;
+            font-size: 20px;
             font-weight: 300;
             margin-bottom: 30px;
         }
 
         /* Love Section */
         .love-wrapper {
-            background: rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.2);
             padding: 25px;
             border-radius: 15px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
             width: 90%;
             max-width: 400px;
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(15px);
             animation: fadeIn 1.5s ease-in-out;
+            position: relative;
         }
 
         .question {
-            font-size: 24px;
+            font-size: 26px;
             font-weight: bold;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
         }
 
         .gif {
-            width: 200px;
+            width: 220px;
             height: auto;
             margin: 15px 0;
             border-radius: 10px;
@@ -74,21 +75,23 @@
 
         button {
             font-size: 18px;
-            padding: 12px 20px;
+            padding: 12px 25px;
             border: none;
             cursor: pointer;
             border-radius: 8px;
             transition: all 0.3s ease-in-out;
             font-weight: bold;
+            outline: none;
         }
 
         #yes-btn {
-            background-color: #ff4d6d;
+            background: linear-gradient(to right, #ff4d6d, #ff1e56);
             color: white;
+            box-shadow: 0 0 15px rgba(255, 77, 109, 0.6);
         }
 
         #yes-btn:hover {
-            background-color: #ff1c4d;
+            background: linear-gradient(to right, #ff1e56, #ff4d6d);
             transform: scale(1.1);
         }
 
@@ -104,16 +107,16 @@
             position: absolute;
         }
 
-        /* Heart Floating Animation */
+        /* Floating Heart Animation */
         @keyframes float {
             0% { transform: translateY(0); opacity: 1; }
-            100% { transform: translateY(-100px); opacity: 0; }
+            100% { transform: translateY(-150px); opacity: 0; }
         }
 
         .heart {
             position: absolute;
             font-size: 28px;
-            animation: float 2.5s linear infinite;
+            animation: float 3s linear infinite;
             color: #ff1c4d;
         }
 
@@ -122,13 +125,23 @@
             0% { opacity: 0; transform: scale(0.8); }
             100% { opacity: 1; transform: scale(1); }
         }
+
+        /* Love Message Pop-up */
+        .hidden-message {
+            display: none;
+            font-size: 22px;
+            font-weight: bold;
+            color: #fff;
+            margin-top: 20px;
+            animation: fadeIn 1s ease-in-out;
+        }
     </style>
 </head>
 <body>
 
     <!-- Header -->
     <h1>Aarish ❤️ His Love</h1>
-    <p>This is just for you, my love! 💖</p>
+    <p>My love for you is endless! 💖</p>
 
     <!-- Love Interaction -->
     <div class="love-wrapper">
@@ -138,12 +151,13 @@
             <button id="yes-btn">Yes</button>
             <button id="no-btn">No</button>
         </div>
+        <p class="hidden-message" id="love-message">Awww! I knew it! You are my forever love! 😘❤️</p>
     </div>
 
     <script>
         // Yes Button Click Event
         document.getElementById('yes-btn').addEventListener('click', function() {
-            alert('Aww! I love you even more! 💖🥰');
+            document.getElementById('love-message').style.display = "block";
         });
 
         // No Button Moves Away When Hovered
@@ -170,7 +184,7 @@
             }, 3000);
         }
 
-        setInterval(createHeart, 600);
+        setInterval(createHeart, 500);
     </script>
 
 </body>
