@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aarish ❤️ His Love</title>
     <style>
-        /* General Page Styles */
+        /* Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap');
+
+        /* General Styles */
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Poppins', sans-serif;
             text-align: center;
-            background: linear-gradient(to right, #ff9a9e, #fad0c4);
-            color: #fff;
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            color: white;
             margin: 0;
             padding: 0;
             height: 100vh;
@@ -18,32 +21,39 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            overflow: hidden;
         }
 
         /* Header */
         h1 {
-            font-size: 36px;
+            font-family: 'Pacifico', cursive;
+            font-size: 42px;
             margin-bottom: 10px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
         }
 
         p {
             font-size: 18px;
+            font-weight: 300;
             margin-bottom: 30px;
         }
 
         /* Love Section */
         .love-wrapper {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            width: 80%;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            width: 90%;
             max-width: 400px;
+            backdrop-filter: blur(10px);
+            animation: fadeIn 1.5s ease-in-out;
         }
 
         .question {
-            font-size: 22px;
+            font-size: 24px;
             font-weight: bold;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
         }
 
         .gif {
@@ -51,41 +61,50 @@
             height: auto;
             margin: 15px 0;
             border-radius: 10px;
+            box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
         }
 
         /* Buttons */
         .btn-group {
             display: flex;
             justify-content: center;
-            gap: 15px;
+            gap: 20px;
             position: relative;
         }
 
         button {
             font-size: 18px;
-            padding: 10px 20px;
+            padding: 12px 20px;
             border: none;
             cursor: pointer;
             border-radius: 8px;
-            transition: 0.3s;
+            transition: all 0.3s ease-in-out;
+            font-weight: bold;
         }
 
         #yes-btn {
-            background-color: #ff69b4;
+            background-color: #ff4d6d;
             color: white;
         }
 
         #yes-btn:hover {
-            background-color: #ff1493;
+            background-color: #ff1c4d;
+            transform: scale(1.1);
         }
 
         #no-btn {
-            background-color: #ddd;
-            color: black;
+            background-color: #ffffff;
+            color: #ff4d6d;
+            border: 2px solid #ff4d6d;
             position: absolute;
         }
 
-        /* Floating Hearts */
+        /* No Button Moves Away */
+        #no-btn:hover {
+            position: absolute;
+        }
+
+        /* Heart Floating Animation */
         @keyframes float {
             0% { transform: translateY(0); opacity: 1; }
             100% { transform: translateY(-100px); opacity: 0; }
@@ -93,9 +112,15 @@
 
         .heart {
             position: absolute;
-            font-size: 24px;
-            animation: float 2s linear infinite;
-            color: #ff4d6d;
+            font-size: 28px;
+            animation: float 2.5s linear infinite;
+            color: #ff1c4d;
+        }
+
+        /* Fade-in Animation */
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1); }
         }
     </style>
 </head>
@@ -103,7 +128,7 @@
 
     <!-- Header -->
     <h1>Aarish ❤️ His Love</h1>
-    <p>A special page just for you!</p>
+    <p>This is just for you, my love! 💖</p>
 
     <!-- Love Interaction -->
     <div class="love-wrapper">
@@ -118,13 +143,13 @@
     <script>
         // Yes Button Click Event
         document.getElementById('yes-btn').addEventListener('click', function() {
-            alert('Yay! I love you too! ❤️🥰');
+            alert('Aww! I love you even more! 💖🥰');
         });
 
-        // No Button Hover Event (Move Away)
+        // No Button Moves Away When Hovered
         document.getElementById('no-btn').addEventListener('mouseover', function() {
-            let x = Math.random() * (window.innerWidth - 100);
-            let y = Math.random() * (window.innerHeight - 50);
+            let x = Math.random() * (window.innerWidth - 150);
+            let y = Math.random() * (window.innerHeight - 80);
             this.style.left = x + 'px';
             this.style.top = y + 'px';
         });
@@ -136,7 +161,7 @@
             heart.innerHTML = '❤️';
             heart.style.left = Math.random() * 100 + 'vw';
             heart.style.top = '100vh';
-            heart.style.animationDuration = Math.random() * 2 + 3 + 's';
+            heart.style.animationDuration = Math.random() * 3 + 2 + 's';
 
             document.body.appendChild(heart);
 
@@ -145,7 +170,7 @@
             }, 3000);
         }
 
-        setInterval(createHeart, 500);
+        setInterval(createHeart, 600);
     </script>
 
 </body>
